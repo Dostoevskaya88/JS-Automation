@@ -116,6 +116,6 @@ const ages = [19, 22, 19, 23, 20, 28, 26, 29, 25, 24, 27];
  let value1 = minAge - averageAge
  let value2 = maxAge - averageAge
  let compare = Math.abs(value1) > Math.abs(value2)
-  ? console.log(`${Math.abs(value1).toFixed(2)} больше чем ${Math.abs(value2).toFixed(2)}`) : console.log(`${value1}.toFixed(2) меньше чем ${value2}.toFixed(2)`)
-
+  ? console.log(`${Math.abs(value1).toFixed(2)} больше чем ${Math.abs(value2).toFixed(2)}`) : console.log(`${value1.toFixed(2)} меньше чем ${value2.toFixed(2)}`)
+//иначе выводит кракозяблины
  */
