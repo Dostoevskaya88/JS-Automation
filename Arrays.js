@@ -33,7 +33,13 @@
   let checkItem = 'Ethiopia'
     countries.includes(checkItem) ? console.log('ETHIOPIA') : countries.push(checkItem)
     console.log(countries) */
+//На данный момент если в массиве будет Ephiopia в массиве, то оно выведет и слово и весь массив целиком. Тебе же надо вывести только слово в таком случае.
+//Как можно это сделать через тернарный оператор
 
+  let checkItem = 'Ethiopia'
+    countries.includes(checkItem) ? console.log('ETHIOPIA') : ( countries.push(checkItem),
+    console.log(countries));
+//Но лучше и читабельнее было бы сделать этот пример через обычный if else
 
 //3)In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
   /* const webTechs = [
@@ -49,6 +55,9 @@
     webTechs.includes(checkItem) ? console.log('Sass is a CSS preprocess') : webTechs.push(checkItem)
     console.log(webTechs) */
   
+// то же самое что и в предыдущем
+
+
 //4)Concatenate the following two variables and store it in a fullStack variable.
 /* const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
 const backEnd = ['Node','Express', 'MongoDB'];
@@ -76,6 +85,23 @@ console.log(fullStack) */
    let medianAge3 = (sortArray[medianAge1Round] + sortArray[medianAge2])/2
    console.log(medianAge3) 
 }
+//Решение этой задачи должно было выглядеть примерно так
+
+const ages = [19, 22, 19, 23, 20, 28, 26, 29, 25, 24, 27];
+ let sortArray = ages.sort()
+ //2.Find the median age(one middle item or two middle items divided by two)
+     const medianAge = sortArray.length/2
+ if (sortArray.length % 2 === 0) {
+    console.log((sortArray[medianAge] + sortArray[medianAge +1])/2)
+} else {
+   let medianAge1Round = Math.floor(medianAge)
+   console.log(sortArray[medianAge1Round])
+}
+//Думаю просто запутался с медианой снова. Когда нечетное число элементов в массиве тебе не нужно было ничего складывать и делать, а просто поделить количество элементов в массиве на 2,
+// и округлить до большего и вывести этот элемент.
+// А для четного количества элементов нужно было поделить количество элементов на 2, взять полученный и следующий элемент сложить их и поделить на 2
+
+
 //3.Find the average age(all items divided by number of items)
  let a = ages.length
  let sum = 0
